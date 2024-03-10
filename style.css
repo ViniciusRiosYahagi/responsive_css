@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+main {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "aside section section"
+    "footer footer footer"
+  ;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(196, 255, 108);
+}
+
+nav {
+  height: 50px;
+  grid-area: nav;
+  background-color: rgb(108, 255, 218);
+}
+
+aside {
+  grid-area: aside;
+  background-color: rgb(130, 108, 255);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 1080px;
+  grid-area: section;
+  background-color: rgb(255, 155, 108);
+}
+
+article {
+  width: 90%;
+  height: 300px;
+  grid-area: article;
+  background-color: rgb(108, 208, 255);
+}
+
+footer {
+  grid-area: footer;
+  background-color:rgb(255, 253, 108);
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
